@@ -1,0 +1,13 @@
+br\fafiman\trabalhofinal\busines\AutomovelDAO.class
+br\fafiman\trabalhofinal\controller\MotocicletaControlador.class
+br\fafiman\trabalhofinal\controller\MarcaControlador.class
+br\fafiman\trabalhofinal\persistencia\Persistencia.class
+br\fafiman\trabalhofinal\entidades\Automovel.class
+br\fafiman\trabalhofinal\controller\AutomovelControlador.class
+br\fafiman\trabalhofinal\busines\MarcaDAO.class
+br\fafiman\trabalhofinal\busines\MotocicletaDAO.class
+br\fafiman\trabalhofinal\busines\GenericDAO.class
+br\fafiman\trabalhofinal\entidades\Marca.class
+br\fafiman\trabalhofinal\entidades\Motocicleta.class
+br\fafiman\trabalhofinal\persistencia\JPAUtils.class
+br\fafiman\trabalhofinal\entidades\Veiculo.class

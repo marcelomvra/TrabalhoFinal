@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W#C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head> 
+        <title>
+            Fafiman
+        </title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panelGrid style="margin-top:20px">
+                <f:facet name="header">
+                    <p:row>
+                        <p:column colspan="6">Editando Marca</p:column>      
+                    </p:row>
+                </f:facet>
+                <p:row>
+                    <p:column><h:outputText value="Nome"/></p:column>
+                    <p:column colspan="5">
+                        <p:inputText id="nome" size="50"  value="#{marcaControlador.entidade.nome}" required="true" requiredMessage="O campo NOME é obrigatório."  />
+                        <p:message for="nome" showDetail="true" />
+                        <p:focus for="nome" />
+                    </p:column>
+                </p:row>
+
+                <p:row>
+                    <p:column><h:outputText value="Descrição"/></p:column>
+                    <p:column colspan="5">
+                        <p:inputText id="numerocartao" size="100"  value="#{marcaControlador.entidade.descricao}"/>
+                    </p:column>
+                </p:row>                
+
+                <p:row>
+                    <p:column>
+                        <h:outputText value="Data da fundação"/>
+                    </p:column>
+                    <p:column colspan="5">
+                        <p:calendar id="abertura"  value="#{marcaControlador.entidade.fundacao}" pattern="dd/MM/yyyy HH:mm:ss"  effect="slide"/> 
+                    </p:column>
+                </p:row>
+
+                <f:facet name="footer">
+                    <p:row>
+                        <p:column colspan="6" style="text-align: right">
+                            <p:commandButton actionListener="#{marcaControlador.salvar()}" action="/index" update="msgs" ajax="false" value="Salvar"/> 
+                            <p:spacer width="20"/>
+                            <p:commandButton  action="/index" update="msgs" ajax="false" value="Cancelar" immediate="true"/> 
+                        </p:column>
+                    </p:row>
+                </f:facet>
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
